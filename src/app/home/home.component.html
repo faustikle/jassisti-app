@@ -1,6 +1,11 @@
 <p>
-  <img src="{{ usuario?.foto }}" alt="">  
-  Usuario: {{ usuario?.nome }}
+  <img src="{{ usuario?.picture.data.url }}" alt="">  
+  Usuario: {{ usuario?.name }}
 
   <button (click)="deslogar()">Sair</button>
 </p>
+<ul>
+  <li *ngFor="let serie of usuario?.television.data">{{ serie.name }}</li>
+</ul>
+<hr>
+<h3>Series selecionadas</h3>
